@@ -17,11 +17,12 @@ public class CarMovement : MonoBehaviour
     void FixedUpdate()
     {
         //going forward movement
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            Debug.Log("Up");
-            rigidBody.AddForce(transform.right * speed);
+            rigidBody.AddForce(transform.up * speed);
         }
+
+        rigidBody.velocity = transform.up * Vector2.Dot(rigidBody.velocity, transform.up);
 
         //rotation movement
         rigidBody.AddTorque( Input.GetAxis("Horizontal") * torque);
