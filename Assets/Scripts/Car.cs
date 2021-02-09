@@ -8,6 +8,10 @@ public class Car : MonoBehaviour
     public float torque = -2.0f;
 
     public Rigidbody2D rigidBody;
+
+    // how many times player passed through Tile
+    int passCount = 0;
+    public TimeCounter time;
     
     void FixedUpdate()
     {
@@ -29,6 +33,12 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.transform.name);
+        passCount += 1; //1-start 2-finish
+        Debug.Log(collision.transform.name + passCount); 
+
+        if(passCount == 1)
+        {
+            time.StartTimer();
+        }
     }
 }

@@ -8,24 +8,24 @@ public class TimeCounter : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     bool timerOn = false;
+    double delay = 0.0f;
 
     void Start()
     {
         timerText.text = "0,0";
-        StartCoroutine(StartTimer());
     }
 
     void Update()
     {
         if(timerOn)
         {
-            timerText.text = (Time.timeSinceLevelLoadAsDouble - 4f).ToString("F2");
+            timerText.text = (Time.timeSinceLevelLoadAsDouble - delay).ToString("F2");
         }
     }
 
-    IEnumerator StartTimer()
+    public void StartTimer()
     {
-        yield return new WaitForSeconds(4f);
+        delay = Time.timeSinceLevelLoadAsDouble;
         timerOn = true;
     }
 }
