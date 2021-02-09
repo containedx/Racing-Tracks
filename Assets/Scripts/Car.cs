@@ -12,6 +12,9 @@ public class Car : MonoBehaviour
     // how many times player passed through Tile
     int passCount = 0;
     public TimeCounter time;
+
+    public GameObject FinishScreen;
+    public Score score;
     
     void FixedUpdate()
     {
@@ -39,6 +42,12 @@ public class Car : MonoBehaviour
         if(passCount == 1)
         {
             time.StartTimer();
+        }
+        else if(passCount == 2)
+        {
+            FinishScreen.gameObject.SetActive(true);
+            double value = time.MeasureTime();
+            score.SetValue(value);
         }
     }
 }

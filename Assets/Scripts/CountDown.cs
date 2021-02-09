@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CountDown : MonoBehaviour
 {
-    public Transform Screen;
+    public GameObject Screen;
 
     public TextMeshProUGUI countText;
     int secondsToStart = 3;
@@ -27,6 +27,6 @@ public class CountDown : MonoBehaviour
         countText.text = "GO!";
         yield return new WaitForSeconds(1f);
 
-        Screen.gameObject.SetActive(false);
+        Screen.SetActive(false);
     }
 }

@@ -10,6 +10,8 @@ public class TimeCounter : MonoBehaviour
     bool timerOn = false;
     double delay = 0.0f;
 
+    double resultTime;
+
     void Start()
     {
         timerText.text = "0,0";
@@ -27,5 +29,12 @@ public class TimeCounter : MonoBehaviour
     {
         delay = Time.timeSinceLevelLoadAsDouble;
         timerOn = true;
+    }
+
+    public double MeasureTime()
+    {
+        timerOn = false;
+        resultTime = System.Math.Round(Time.timeSinceLevelLoadAsDouble - delay, 2);
+        return resultTime;
     }
 }
