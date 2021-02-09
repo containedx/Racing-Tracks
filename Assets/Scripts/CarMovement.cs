@@ -9,11 +9,6 @@ public class CarMovement : MonoBehaviour
 
     public Rigidbody2D rigidBody;
     
-    void Update()
-    {
-        
-    }
-
     void FixedUpdate()
     {
         //going forward movement
@@ -21,8 +16,12 @@ public class CarMovement : MonoBehaviour
         {
             rigidBody.AddForce(transform.up * speed);
         }
-
         rigidBody.velocity = transform.up * Vector2.Dot(rigidBody.velocity, transform.up);
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            rigidBody.AddForce(transform.up * speed/2 *-1);
+        }
 
         //rotation movement
         rigidBody.AddTorque( Input.GetAxis("Horizontal") * torque);
