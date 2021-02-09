@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarMovement : MonoBehaviour
+public class Car : MonoBehaviour
 {
     public float speed = 5.0f;
     public float torque = -2.0f;
@@ -25,5 +25,10 @@ public class CarMovement : MonoBehaviour
 
         //rotation movement
         rigidBody.AddTorque( Input.GetAxis("Horizontal") * torque);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.transform.name);
     }
 }

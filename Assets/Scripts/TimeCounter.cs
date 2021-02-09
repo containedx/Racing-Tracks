@@ -1,21 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
 public class TimeCounter : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
+    bool timerOn = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        timerText.text = "0,0";
+        StartCoroutine(StartTimer());
     }
 
-    // Update is called once per frame
     void Update()
     {
-        timerText.text = Time.timeSinceLevelLoadAsDouble.ToString("F2");
+        if(timerOn)
+        {
+            timerText.text = (Time.timeSinceLevelLoadAsDouble - 4f).ToString("F2");
+        }
+    }
+
+    IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(4f);
+        timerOn = true;
     }
 }
