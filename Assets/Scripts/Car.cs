@@ -10,6 +10,7 @@ public class Car : MonoBehaviour
     public Rigidbody2D rigidBody;
 
     public TimeCounter time;
+    bool started = false;
 
     public GameObject FinishLine;
     public GameObject FinishScreen;
@@ -37,9 +38,10 @@ public class Car : MonoBehaviour
     {
         Debug.Log(collision.transform.name); 
 
-        if(collision.transform.name == "Tile")
+        if(collision.transform.name == "Tile" && !started)
         {
             time.StartTimer();
+            started = true;
         }
         if(collision.transform.name == "Halfway")
         {
