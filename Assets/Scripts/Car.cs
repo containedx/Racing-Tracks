@@ -9,10 +9,9 @@ public class Car : MonoBehaviour
 
     public Rigidbody2D rigidBody;
 
-    // how many times player passed through Tile
-    int passCount = 0;
     public TimeCounter time;
 
+    public GameObject FinishLine;
     public GameObject FinishScreen;
     public Score score;
     
@@ -36,14 +35,17 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        passCount += 1; //1-start 2-finish
-        Debug.Log(collision.transform.name + passCount); 
+        Debug.Log(collision.transform.name); 
 
-        if(passCount == 1)
+        if(collision.transform.name == "Tile")
         {
             time.StartTimer();
         }
-        else if(passCount == 2)
+        if(collision.transform.name == "Halfway")
+        {
+            FinishLine.gameObject.SetActive(true);
+        }
+        if (collision.transform.name == "Finish")
         {
             FinishScreen.gameObject.SetActive(true);
             double value = time.MeasureTime();
