@@ -39,7 +39,7 @@ public class DataStorage : MonoBehaviour
 
     void Load()
     {
-        bestscore = PlayerPrefs.GetInt(BESTSCORE);
+        bestscore = PlayerPrefs.GetFloat(BESTSCORE);
     }
 
     void Save()
@@ -50,7 +50,7 @@ public class DataStorage : MonoBehaviour
 
     void SetBest()
     {
-        if(score > bestscore)
+        if(score < bestscore)
         {
             bestscore = score;
         }

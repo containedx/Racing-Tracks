@@ -14,6 +14,16 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void Track2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void Track3()
+    {
+        SceneManager.LoadScene("Level3");
+    }
+
 
     public void Exit()
     {

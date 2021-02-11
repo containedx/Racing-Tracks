@@ -26,7 +26,7 @@ public class Car : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            rigidBody.AddForce(transform.up * speed/2 *-1);
+            rigidBody.AddForce(transform.up * speed *-1);
         }
 
         //rotation movement
@@ -35,8 +35,6 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.transform.name); 
-
         if(collision.transform.name == "Tile" && !started)
         {
             time.StartTimer();
