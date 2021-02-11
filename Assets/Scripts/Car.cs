@@ -13,7 +13,7 @@ public class Car : MonoBehaviour
     bool started = false;
 
     public GameObject FinishLine;
-    public GameObject FinishScreen;
+    public bool finish = false;
     public Score score;
     
     void FixedUpdate()
@@ -49,7 +49,7 @@ public class Car : MonoBehaviour
         }
         if (collision.transform.name == "Finish")
         {
-            FinishScreen.gameObject.SetActive(true);
+            finish = true;
             double value = time.MeasureTime();
             score.SetValue(value);
         }

@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     bool pause = false;
 
     public GameObject PauseScreen;
+    public GameObject FinishScreen;
+
+    public Car car;
 
     void Update()
     {
@@ -18,6 +21,11 @@ public class GameManager : MonoBehaviour
         if( Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("Menu");
+        }
+        
+        if(car.finish == true)
+        {
+            FinishScreen.SetActive(true);
         }
     }
 
