@@ -14,18 +14,17 @@ public class Car : MonoBehaviour
 
     public GameObject FinishLine;
     public bool finish = false;
-    public Score score;
     
     void FixedUpdate()
     {
         //going forward movement
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             rigidBody.AddForce(transform.up * speed);
         }
         rigidBody.velocity = transform.up * Vector2.Dot(rigidBody.velocity, transform.up);
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             rigidBody.AddForce(transform.up * speed/2 *-1);
         }
@@ -51,7 +50,6 @@ public class Car : MonoBehaviour
         {
             finish = true;
             double value = time.MeasureTime();
-            score.SetValue(value);
         }
     }
 }

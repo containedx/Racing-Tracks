@@ -7,8 +7,8 @@ public class Score : MonoBehaviour
 {
     public TextMeshProUGUI text;
 
-    public void SetValue(double value)
+    public void SetValue(float score, float bestscore)
     {
-        text.text = "your time: " + value;
+        text.text = "your time: " + score.ToString() + "\n\nbest time: " + bestscore.ToString();
     }
 }

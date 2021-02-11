@@ -10,7 +10,7 @@ public class TimeCounter : MonoBehaviour
     bool timerOn = false;
     double delay = 0.0f;
 
-    double resultTime;
+    public double resultTime;
 
     void Start()
     {

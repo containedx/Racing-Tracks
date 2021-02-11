@@ -1,18 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DataStorage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameManager gameManager;
+    public TimeCounter time;
+
+    public Score Scores;
+
+    [SerializeField]
+    float score;
+    [SerializeField]
+    float bestscore;
+
+    [SerializeField]
+    int level;
+    string BESTSCORE;
+
     void Start()
     {
-        
+        BESTSCORE = "BestScore" + level.ToString();
+        Load();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(gameManager.car.finish)
+        {
+            score = (float)time.resultTime;
+            Save();
+            Scores.SetValue(score, bestscore);
+        }
+    }
+
+
+    void Load()
+    {
+        bestscore = PlayerPrefs.GetInt(BESTSCORE);
+    }
+
+    void Save()
+    {
+        SetBest();
+        PlayerPrefs.SetFloat(BESTSCORE, bestscore);
+    }
+
+    void SetBest()
+    {
+        if(score > bestscore)
+        {
+            bestscore = score;
+        }
     }
 }
+

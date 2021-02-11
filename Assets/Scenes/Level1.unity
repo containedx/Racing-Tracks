@@ -840,6 +840,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseScreen: {fileID: 150355986}
+  FinishScreen: {fileID: 2035570104}
+  car: {fileID: 1589422778}
+--- !u!1 &1176363218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1176363220}
+  - component: {fileID: 1176363219}
+  m_Layer: 0
+  m_Name: DataStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1176363219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176363218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f5dbc4e7c81a04185df323ce0035c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1176363220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176363218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 311.5641, y: 167.5957, z: -57.76468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1368172595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1265,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1378771386620104271}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1589422778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1378771384931151198, guid: b32b408660ee3d4449dcea64ef64106c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1378771386620104271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589422777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62591ea0525fb5343990efcff7f91361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1589422780
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1729,7 +1786,7 @@ PrefabInstance:
     - target: {fileID: 1378771384931151198, guid: b32b408660ee3d4449dcea64ef64106c,
         type: 3}
       propertyPath: speed
-      value: 15
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 1378771384931151198, guid: b32b408660ee3d4449dcea64ef64106c,
         type: 3}
