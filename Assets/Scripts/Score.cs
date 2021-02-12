@@ -9,6 +9,7 @@ public class Score : MonoBehaviour
 
     public void SetValue(float score, float bestscore)
     {
-        text.text = "your time: " + score.ToString() + "\n\nbest time: " + bestscore.ToString();
+        text.text = "your time: " + score.ToString() + "\nbest time: " + bestscore.ToString() +
+                    "\n\npress ESC to go back to menu\npress SPACE to drive lap one more time";
     }
 }

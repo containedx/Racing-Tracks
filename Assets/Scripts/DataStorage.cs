@@ -14,7 +14,7 @@ public class DataStorage : MonoBehaviour
     [SerializeField]
     float score;
     [SerializeField]
-    float bestscore;
+    float bestscore=1000f;
 
     [SerializeField]
     int level;

@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Menu");
         }
+        if( Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         
         if(car.finish == true)
         {
