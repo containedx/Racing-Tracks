@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject PauseScreen;
     public GameObject FinishScreen;
+    public GameObject GameOverScreen;
 
     public Car car;
 
@@ -30,6 +31,11 @@ public class GameManager : MonoBehaviour
         if(car.finish == true)
         {
             FinishScreen.SetActive(true);
+        }
+        if(car.live == false)
+        {
+            GameOverScreen.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

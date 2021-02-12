@@ -17,6 +17,8 @@ public class Car : MonoBehaviour
 
     public GameObject FinishLine;
     public bool finish = false;
+
+    public bool live = true;
     
     void FixedUpdate()
     {
@@ -57,5 +59,14 @@ public class Car : MonoBehaviour
         {
             speed += speedBoost;
         }
+        if(collision.gameObject.layer == 8)
+        {
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        live = false;
     }
 }
