@@ -68,7 +68,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   torque: -2
+  speedBoost: 1
   rigidBody: {fileID: 1378771384931151197}
+  time: {fileID: 0}
+  FinishLine: {fileID: 0}
+  finish: 0
+  live: 1
+  sound: {fileID: 0}
 --- !u!1001 &1378771385336152030
 PrefabInstance:
   m_ObjectHideFlags: 0

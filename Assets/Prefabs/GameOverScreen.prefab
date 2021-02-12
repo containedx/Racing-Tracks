@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: press ESC to get back to menu
+  m_text: "press ESC to get back to menu\npress SPACE 2 times to \ntry again"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c46de5ac1f4b31541858b1d988807bf2, type: 2}
   m_sharedMaterial: {fileID: 8323834124984764095, guid: c46de5ac1f4b31541858b1d988807bf2,

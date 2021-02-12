@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         }
         if( Input.GetKey(KeyCode.Space))
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
