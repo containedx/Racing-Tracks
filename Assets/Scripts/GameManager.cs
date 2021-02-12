@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     public Car car;
 
+    void Start()
+    {
+        Time.timeScale = 1; 
+    }
+
     void Update()
     {
         if( Input.GetKeyDown(KeyCode.P))
@@ -32,6 +37,7 @@ public class GameManager : MonoBehaviour
         if(car.finish == true)
         {
             FinishScreen.SetActive(true);
+            Time.timeScale = 0;
         }
         if(car.live == false)
         {
