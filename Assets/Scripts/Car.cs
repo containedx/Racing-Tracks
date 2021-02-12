@@ -7,6 +7,9 @@ public class Car : MonoBehaviour
     public float speed = 5.0f;
     public float torque = -2.0f;
 
+    [SerializeField]
+    float speedBoost = 1f;
+
     public Rigidbody2D rigidBody;
 
     public TimeCounter time;
@@ -48,6 +51,11 @@ public class Car : MonoBehaviour
         {
             finish = true;
             double value = time.MeasureTime();
+        }
+
+        if(collision.transform.name == "Bridge")
+        {
+            speed += speedBoost;
         }
     }
 }
