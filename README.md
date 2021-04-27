@@ -1,3 +1,3 @@
 # Racing-Tracks
 
-Download here -> https://itch.io/game/edit/917982
+Download & more info here -> https://containedx.itch.io/racing-tracks
