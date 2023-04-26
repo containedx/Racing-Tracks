@@ -11,7 +11,9 @@ I had lot of fun trying to create aesthetic UI experience.
 
 Below is short presentation of the game.
 
-https://user-images.githubusercontent.com/28840358/234562213-dfc502a0-8048-4323-94d4-3d81956d6f89.mp4
+
+https://user-images.githubusercontent.com/28840358/234566150-4bb1d22a-c734-4dfa-894a-ab506b97b425.mp4
+
 
 
 Download & more info here -> https://containedx.itch.io/racing-tracks
